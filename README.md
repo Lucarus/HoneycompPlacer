@@ -2,7 +2,7 @@
 Simple Script to place Honeycomp-Skins for Rainmeter
 
 <p align="center">
-  <img src="./honeycomp.jpg" alt="Example"
+  <img src="./honeycomp.JPG" alt="Example"
        width="787" height="576">
 </p>
 
