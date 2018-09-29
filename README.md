@@ -1,9 +1,7 @@
 # HoneycompPlacer
 Simple Script to place Honeycomp-Skins for Rainmeter
 
-In order to use the Script and apply it to your Skins you need to add an extra option to each Skin that should be placed by my script. 
-The name of the option can be configured in the Script and the value needs to be a number.
-This number is later used to create groups so you can have multiple comps.
+Currently only uses up to 7 Comps per Honeycomp this is due to me not beeing able to see a pattern in the creation of the Honeycomps :S For now the locations are kind of hardcoded. If you have an idea how to create a dynamic Honeycomp-Pattern feel free to open up a pull request.
 
 Images need to be in 512x512 and then need to be cropped by imageCropper.py.
 In order for the Script to run, you will need to insall `pillow`
@@ -13,6 +11,35 @@ In order for the Script to run, you will need to insall `pillow`
 imageCropper will cut the borders and makes it easyer to align the comps
 
 If your comps are not 90px high (set in the Skin itself, not the image height) you will need to change that in the Script, same goes for the width.
+
+## Editing Rainmeter.ini
+In order to use the Script and apply it to your Skins you need to add an extra option to each Skin that should be placed by my script. 
+The name of the option can be configured in the Script and the value needs to be a number.
+This number is later used to create groups so you can have multiple comps.
+``` ini
+[Authentic Weather]
+active = 1
+windowx = 2632
+windowy = 466
+clickthrough = 1
+draggable = 0
+snapedges = 1
+keeponscreen = 1
+alwaysontop = 0
+
+[Honeycomb\word]
+active = 1
+windowx = 300
+windowy = 1100
+clickthrough = 0
+draggable = 1
+snapedges = 1
+keeponscreen = 1
+alwaysontop = 0
+honey_group = 1
+```
+Here you can see, only Honeycomp\word has the group 1 and Authentic Weather has no group.
+All Skins with the same groupnumber will form a Honeycomp
 
 ## Editing the Script
 
