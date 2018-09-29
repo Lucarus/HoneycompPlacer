@@ -1,6 +1,11 @@
 # HoneycompPlacer
 Simple Script to place Honeycomp-Skins for Rainmeter
 
+<p align="center">
+  <img src="./honeycomp.jpg" alt="Example"
+       width="787" height="576">
+</p>
+
 Currently only uses up to 7 Comps per Honeycomp this is due to me not beeing able to see a pattern in the creation of the Honeycomps :S For now the locations are kind of hardcoded. If you have an idea how to create a dynamic Honeycomp-Pattern feel free to open up a pull request.
 
 Images need to be in 512x512 and then need to be cropped by imageCropper.py.
