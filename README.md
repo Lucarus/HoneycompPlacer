@@ -16,7 +16,15 @@ If your comps are not 90px high (set in the Skin itself, not the image height) y
 
 ## Editing the Script
 
-After your images are cropped and you set the group for all your Skins you will need to edit the Script.
+- Open imageCropper.py:
+
+Set the path to your images use a wildcard e.g.: `*.png` to ensure only the right images are cropped
+``` python
+rainmeterini = "C:/Users/Lukas/AppData/Roaming/Rainmeter/Rainmeter.ini"
+```
+Now backup all your images (just in case :D) and run the script. This Script kinda only works if your images use the template provided by honeycomp-Skin
+
+After your images are cropped and you set the group for all your Skins you will need to edit the main Script.
 - Open placer.py:
 
 Set the path to your rainmeter.ini (the file will be backedup by the script, every time it runs)
@@ -32,4 +40,13 @@ Change the sizes if your skins don't use the 90px height
 compHeight = 90
 compWidth = 74
 ```
-
+Now the important part. Set the x and y offset for the center Comp. All other Comps will be build arround that one.
+``` python
+group = 3 # the group that will be changed
+yOffset = 750
+xOffset = 450
+```
+On the end of the Script set the path to your rainmeter installation. This will automatically refresh all Skins after the Script ran.
+``` python
+call(["C:/Program Files/Rainmeter/Rainmeter.exe", "!RefreshApp"])
+```
